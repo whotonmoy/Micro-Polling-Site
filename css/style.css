@@ -1,0 +1,756 @@
+body {
+  font-family: Monaco, monospace;
+  overflow-x: hidden; /* overflow needed for hamburger menu because hiding the menu on the right side is not perfect */
+}
+
+/* Mainpage, Signup Page, Poll Create Page Grid */
+.logsigngrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+  height: 100vh;
+}
+
+/* Poll Management Page Grid */
+.managementgrid {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  /* grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr; */
+}
+
+/* Header for all html files */
+header {
+  background-color: #008690;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+  padding: 40px 0;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+/* Header for pollmanagement.html */
+.managementgrid header {
+    background-color: #008690;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+    padding: 40px 0;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/* Links styling */
+a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: tomato;
+}
+
+/* Login and Signup sign on mainpage and signup page */
+#pagehead {
+  text-align: center;
+  padding-top: 20px;
+  font-size: x-large;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+#login-form,
+#signup-form {
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: auto;
+  display: inline-block;
+  border-radius: 5px;
+  box-sizing: border-box;
+  
+}
+
+input[type=file] {
+  width: 40%;
+  float: right;
+  text-align: left;
+}
+
+/* Login and Signup buttons */
+#buttons {
+  background-color: #008690;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  padding: 14px 20px;
+  display: block;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  transition-duration: 0.4s;
+}
+
+/* Login and Signup buttons hover*/
+#buttons:hover {
+  background-color: #00a4af;
+  opacity: 0.8;
+}
+
+/* login and signup boxes */
+.container {
+  border: none;
+  margin: auto;
+  width: 35%;
+  padding: 10px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+/* Poll creation page box */
+.creation {
+  border: 3px solid #f1f1f1;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0px 30px 100% 30px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  
+}
+
+
+/* Add Option Button in Poll Create Page */
+#addquestion {
+  background-color: #008690;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  padding: 10px 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  transition-duration: 0.4s;
+}
+
+/* Add Option Button in Poll Create Page */
+#addquestion:hover {
+  background-color: #00a4af;
+  opacity: 0.8;
+}
+
+
+/* Create it Button in Poll Create Page */
+#postpoll {
+  background-color: #008690;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  padding: 10px 30px;
+  margin-top: 5px;
+  border: none;
+  float: right;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  transition-duration: 0.4s;
+}
+
+/* Create it Button in Poll Create Page */
+#postpoll:hover {
+  background-color: #08e150;
+  opacity: 0.8;
+}
+
+/* foot-note class in mainpage.html */
+.foot-note {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+
+
+/* Logout Button in Polls Create Page*/
+#logout {
+  background-color: #008690;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  padding: auto;
+  margin-top: 16.5%;
+  margin-left: 77%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 20%;
+  width: 20%;
+  transition-duration: 0.4s;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+
+#logout:hover {
+  background-color: Red;
+  opacity: 0.8;
+}
+
+/* Create Poll Button in Poll Management Page */
+#createpoll {
+  position: absolute;
+  background-color: #008690;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 60px;
+  width: 150px;
+  margin: 120px 200px 0 0;
+  padding: 20px 0;
+  right: -150px;
+  top: 115px;
+  transition-duration: 0.4s;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+#createpoll:hover {
+  background-color: #00a4af;
+  opacity: 0.8;
+}
+
+/* User Info in Poll Management Page */
+#userinfo {
+  border: 3px solid #005156;
+  border-radius: 20px;
+  height: fit-content;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  text-shadow: #232323;
+  margin: 20px;
+  padding: 20px;
+  overflow: visible;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+/* Table in Poll Management Page */
+#resultstable {
+  overflow: scroll;
+  grid-column-start: 2;
+  grid-column-end: 3; 
+}
+
+/* Table styling */
+tr {
+  height: 20%;
+  width: 100%;
+}
+
+td {
+  width: 10%;
+}
+
+/* Poll management Page Heading */
+#pollmanagementheading {
+  padding-top: 10px;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+/* Pollvote div class styling in pollvote.html */
+.pollvote {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 5;
+}
+
+.pollvote h1 {
+  text-align: center;
+}
+
+.pollvote .box label {
+  display: flex;
+  height: 53px;
+  width: 100%;
+  align-items: center;
+  border: solid 1px lightgray;
+  border-radius: 50px;
+  margin: 10px 0;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.pollvote .box label .dot {
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+
+.box label .dot::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Poll vote page styling for the selection option of the votes */
+#option-1:checked~.option-1 .dot::before,
+#option-2:checked~.option-2 .dot::before,
+#option-3:checked~.option-3 .dot::before,
+#option-4:checked~.option-4 .dot::before,
+#option-5:checked~.option-5 .dot::before {
+  background: #333;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.3s ease;
+}
+
+.pollvote .box label .optiontext {
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+#option-1:checked~.option-1,
+#option-2:checked~.option-2,
+#option-3:checked~.option-3,
+#option-4:checked~.option-4,
+#option-5:checked~.option-5 {
+  background: #333;
+  border-color: #01b4c1;
+}
+
+#option-1:checked~.option-1 .optiontext,
+#option-2:checked~.option-2 .optiontext,
+#option-3:checked~.option-3 .optiontext,
+#option-4:checked~.option-4 .optiontext,
+#option-5:checked~.option-5 .optiontext {
+  color: #fff;
+}
+
+.pollvote .box input[type='radio'] {
+  display: none;
+}
+
+/* Poll Results Page link from Poll Vote Page */
+.pollresultslinkfromvote {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+/* Poll Username Text */
+#pollusername {
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.createdby {
+  border: solid 2px #f1f1f1;
+  border-radius: 10px;
+  font-size: 20px;
+  width: 30%;
+  padding: 10px;
+  vertical-align: middle;
+}
+
+.pollresults {
+  width: 800px;
+  margin: 20px auto;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.managementresults .pollresults {
+  width: 80%;
+  border: none;
+  color: #fff;
+  padding: 5px 20px;
+  margin: 0%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.pollresults .createdby  {
+  width: 37%;
+}
+
+.pollresults .createdby span {
+  color: #333;
+}
+
+.pollresults h1 {
+  color: #333;
+  text-align: center;
+}
+
+.pollresults h3 {
+  color: #333;
+  margin: 5px;
+}
+
+.pollresults p {
+  color: #333;
+  margin: 5px;
+}
+
+.pollresults h4 {
+  color: #333;
+  margin: 5px;
+}
+
+#pollresultshead {
+  text-align: center;
+  padding: 50px;
+}
+
+.pollresults li {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.managementresults .pollresults li {
+  margin: 20px 0;
+  padding: 5px;
+}
+
+.bar {
+  background: #353b48;
+  display: block;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.managementresults .bar {
+  background: #353b48;
+  display: block;
+  height: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.bar:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+  height: 20px;
+  float: left;
+  background: linear-gradient(135deg, rgb(1, 136, 132)0%, rgb(0, 185, 173)100%);
+}
+
+
+/* Graphical Bar representations */
+/* Poll 1 */
+.Issac {
+  width: 55%;
+}
+
+.Albert {
+  width: 12%;
+}
+
+.Galileo {
+  width: 15%;
+}
+
+.Tonmoy {
+  width: 10%;
+}
+
+.Stephen {
+  width: 8%;
+}
+
+/* Poll 2 */
+.Elon {
+  width: 39%;
+}
+
+.Mark {
+  width: 8%;
+}
+
+.Sundar {
+  width: 41%;
+}
+
+.Shikamaru {
+  width: 12%;
+}
+
+/* Poll 3 */
+.England {
+  width: 2%;
+}
+
+.India {
+  width: 70%;
+}
+
+.Bangladesh {
+  width: 8%;
+}
+
+.Pak {
+  width: 0%;
+}
+
+.Srilanka {
+  width: 20%;
+}
+
+/* Poll 4 */
+.Malta {
+  width: 13%;
+}
+
+.Vatican {
+  width: 60%;
+}
+
+.Luxembourg {
+  width: 8%;
+}
+
+.Andorra {
+  width: 14%;
+}
+
+.Tuvalu {
+  width: 5%;
+}
+
+
+
+
+/* div class foot styling */
+.foot {
+  text-align: center;
+  font-size: larger;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+
+
+/* Link to Login from Signup Page */
+.ouser {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+/* Line styling for mainpage.html */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+/* Error Messages */
+.input-error {
+  border-color: red;
+}
+
+.error-msg {
+  color: red;
+  font-style: italic;
+  text-align: right;
+}
+
+.error-text-hidden {
+  visibility: hidden;
+}
+
+
+
+
+
+/* Hamburger menu Stylings from here on */
+/* Hamburger Menu Taken From: https://codepen.io/erikterwan/pen/grOZxx */
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * The last one should go the other direction
+ */
+#menuToggle input:checked~span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked~ul {
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+}
